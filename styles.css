@@ -279,6 +279,22 @@ h1 {
   color: var(--muted);
 }
 
+.feature:nth-child(1) {
+  background: #fffdf8;
+}
+
+.feature:nth-child(2) {
+  background: #fff6ea;
+}
+
+.feature:nth-child(3) {
+  background: #f4fbf6;
+}
+
+.feature:nth-child(4) {
+  background: #f6f8ff;
+}
+
 .split {
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
