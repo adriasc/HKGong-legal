@@ -322,6 +322,39 @@ h1 {
   color: var(--muted);
 }
 
+.system-section {
+  background:
+    linear-gradient(135deg, rgba(47, 116, 98, 0.1), transparent 42%),
+    rgba(255, 253, 248, 0.72);
+}
+
+.system-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.75fr);
+  gap: clamp(26px, 5vw, 62px);
+  align-items: center;
+}
+
+.system-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: start;
+}
+
+.system-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffdf8;
+  color: var(--ink);
+  font-weight: 900;
+  box-shadow: 0 10px 24px rgba(71, 45, 27, 0.08);
+}
+
 .access-section {
   background: rgba(255, 253, 248, 0.68);
 }
@@ -373,6 +406,76 @@ h1 {
 .access-card p {
   margin: 10px 0 0;
   color: var(--muted);
+}
+
+.starter-section {
+  background: #fffdf8;
+}
+
+.starter-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(300px, 0.82fr);
+  gap: clamp(24px, 5vw, 60px);
+  align-items: center;
+  padding: clamp(24px, 5vw, 44px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(221, 63, 56, 0.1), transparent 42%),
+    linear-gradient(225deg, rgba(56, 109, 159, 0.1), transparent 48%),
+    #fff8ed;
+  box-shadow: var(--shadow);
+}
+
+.signup-form {
+  display: grid;
+  gap: 10px;
+}
+
+.signup-form label {
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.signup-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+}
+
+.signup-row input {
+  min-width: 0;
+  min-height: 52px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffdf8;
+  color: var(--ink);
+  font: inherit;
+}
+
+.signup-row input:focus {
+  outline: 3px solid rgba(56, 109, 159, 0.22);
+  border-color: var(--blue);
+}
+
+.signup-row button {
+  min-height: 52px;
+  padding: 0 18px;
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  background: var(--ink);
+  color: #fff;
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(25, 21, 19, 0.16);
+}
+
+.signup-note {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
 }
 
 .download {
@@ -439,6 +542,8 @@ h1 {
 @media (max-width: 920px) {
   .hero,
   .split,
+  .system-layout,
+  .starter-card,
   .download {
     grid-template-columns: 1fr;
   }
@@ -489,6 +594,14 @@ h1 {
   .screen-note {
     position: static;
     margin-top: 12px;
+  }
+
+  .signup-row {
+    grid-template-columns: 1fr;
+  }
+
+  .signup-row button {
+    width: 100%;
   }
 
   .site-footer {
