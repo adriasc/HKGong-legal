@@ -322,6 +322,77 @@ h1 {
   color: var(--muted);
 }
 
+.language-section {
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(56, 109, 159, 0.1), transparent 38%),
+    linear-gradient(225deg, rgba(219, 165, 60, 0.16), transparent 44%),
+    #fff8ed;
+}
+
+.language-header {
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(320px, 0.9fr);
+  gap: clamp(22px, 5vw, 64px);
+  align-items: end;
+}
+
+.language-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.language-pills span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 253, 248, 0.8);
+  color: var(--ink);
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.language-strip {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(230px, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  scroll-snap-type: x proximity;
+}
+
+.language-card {
+  min-width: 230px;
+  margin: 0;
+  scroll-snap-align: start;
+}
+
+.language-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.84 / 1;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffdf8;
+  box-shadow: 0 14px 30px rgba(71, 45, 27, 0.1);
+}
+
+.language-card figcaption {
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
 .system-section {
   background:
     linear-gradient(135deg, rgba(47, 116, 98, 0.1), transparent 42%),
@@ -583,6 +654,7 @@ h1 {
   .hero,
   .split,
   .system-layout,
+  .language-header,
   .starter-card,
   .download {
     grid-template-columns: 1fr;
