@@ -9,6 +9,7 @@ from reportlab.lib.units import mm
 from reportlab.pdfbase.cidfonts import UnicodeCIDFont
 from reportlab.pdfbase.pdfmetrics import registerFont
 from reportlab.platypus import (
+    CondPageBreak,
     KeepTogether,
     PageBreak,
     Paragraph,
@@ -553,6 +554,7 @@ def build():
 
     for index, section in enumerate(SECTIONS):
         block = [
+            CondPageBreak(82 * mm),
             p(section["title"], styles["Heading"]),
             p(section["intro"], styles["Small"]),
             term_table(section, styles),
