@@ -178,16 +178,29 @@
             No spam, just occasional practical tips for studying Cantonese with the app.
           </p>
         </div>
-        <form class="signup-form" action="mailto:hello@hkgong.com?subject=Send%20me%20the%20HKGong%20Starter%20Guide" method="post" enctype="text/plain">
-          <input type="hidden" name="guide" value="HKGong Cantonese Starter Guide" />
+        <form
+          class="signup-form"
+          id="starter-signup-form"
+          action="https://hkgong.us14.list-manage.com/subscribe/post?u=124035978f44fa7ef0f074e76&amp;id=e735150298&amp;f_id=00c0b5e5f0"
+          data-fallback-action="mailto:hello@hkgong.com"
+          data-mailchimp-action="https://hkgong.us14.list-manage.com/subscribe/post?u=124035978f44fa7ef0f074e76&amp;id=e735150298&amp;f_id=00c0b5e5f0"
+          method="post"
+          enctype="application/x-www-form-urlencoded"
+          target="_blank"
+        >
           <label for="email">Email address</label>
           <div class="signup-row">
-            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+            <input id="email" name="EMAIL" type="email" placeholder="you@example.com" autocomplete="email" required />
             <button type="submit">Send me the guide</button>
           </div>
+          <div aria-hidden="true" class="signup-honeypot">
+            <label for="mailchimp-bot-field">Leave this field empty</label>
+            <input id="mailchimp-bot-field" type="text" name="b_124035978f44fa7ef0f074e76_e735150298" tabindex="-1" value="" />
+          </div>
           <p class="signup-note">
-            Temporary signup: this opens an email to hello@hkgong.com so the guide can be sent manually. A Mailchimp or Buttondown form can replace it when the list is created.
+            Occasional HKGong study tips. Unsubscribe anytime.
           </p>
+          <p class="signup-status" id="starter-signup-status" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
@@ -244,5 +257,6 @@
       <a href="mailto:support@hkgong.com">Contact</a>
     </nav>
   </footer>
+  <script src="./newsletter.js"></script>
 </body>
 </html>
