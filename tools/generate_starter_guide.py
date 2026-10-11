@@ -21,7 +21,8 @@ from reportlab.platypus import (
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "assets" / "hkgong-cantonese-starter-guide.pdf"
+# Legacy 12-page generator. Keep its output separate from the approved 21-page guide.
+OUT = ROOT / "assets" / "hkgong-cantonese-starter-guide-legacy-12p.pdf"
 
 INK = colors.HexColor("#191513")
 MUTED = colors.HexColor("#5e5248")
