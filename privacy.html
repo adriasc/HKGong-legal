@@ -15,7 +15,8 @@
 
   <h2>Data We May Collect</h2>
   <p>Account data (email), optional app usage events, learning progress, and purchase status.</p>
-  <p>When a purchase, restore, or subscription-offer check fails or remains unresolved, the app may send a limited technical incident to help us diagnose it: the operation and stage, a standard error code/category, app and native build, iOS or Android platform, approximate durations, and a random identifier used only for that attempt. The incident does not contain your account ID, email, receipt, transaction, purchase token, or the text of the underlying error. It is separate from optional Usage Analytics and may be sent when that setting is off.</p>
+  <p>When a purchase, restore, or subscription-offer check fails or remains unresolved, the app may send a limited technical incident to help us diagnose it: the operation and stage, a standard error code/category, app and native build, iOS or Android platform, approximate durations, and a random identifier used only for that attempt. The stored incident does not contain your account ID, email, receipt, transaction, purchase token, or the text of the underlying error. It is separate from optional Usage Analytics and may be sent when that setting is off.</p>
+  <p>The incident channel uses an already-existing, valid sign-in session to authenticate the request. Its access token is sent only for that check and is not copied into our incident records or application logs. The incident channel does not create or refresh a session; when no valid session is available, the incident is skipped. Purchases and restores do not depend on incident delivery.</p>
 
   <h2>Why We Use Data</h2>
   <p>To provide app features, sync progress, improve quality, diagnose payment and subscription problems, and manage subscriptions. Optional app usage events follow the Usage Analytics setting in the app.</p>
